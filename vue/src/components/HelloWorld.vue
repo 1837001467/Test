@@ -10,6 +10,7 @@ const count = ref(0)
 
 <template>
   <h1>{{ msg }}</h1>
+  <h2>哈哈</h2>
 
   <p>
     Recommended IDE setup:
