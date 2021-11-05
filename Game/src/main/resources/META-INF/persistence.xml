@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="jpaUtil">
+        <class>com.xielingwei.pojo.Information</class>
+        <class>com.xielingwei.pojo.Relationship</class>
+        <properties>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://tr-yf03001.mysql.rds.aliyuncs.com:3306"/>
+        </properties>
+    </persistence-unit>
+</persistence>

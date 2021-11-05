@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xielingwei.model.mapper.InformationMapper">
+    <resultMap id="like" type="com.xielingwei.pojo.Information">
+        <id property="id" column="id"/>
+        <result property="iage" column="iage"/>
+        <result property="ibian" column="ibian"/>
+        <result property="igong" column="igong"/>
+        <result property="iguo" column="iguo"/>
+        <result property="ihao" column="ihao"/>
+        <result property="ihome" column="ihome"/>
+        <result property="iname" column="iname"/>
+        <result property="iphone" column="iphone"/>
+        <result property="isex" column="isex"/>
+        <result property="itime" column="itime"/>
+        <result property="iuser" column="iuser"/>
+        <result property="iyong" column="iyong"/>
+        <result property="izhen" column="izhen"/>
+    </resultMap>
+    <select id="selectLikes" resultMap="like">
+            select  * from information i
+            <where>
+                <if test="iname !=null and iname !=''">
+                    and i.iname like concat('%',#{iname},'%')
+                </if>
+            </where>
+            order by i.id desc
+        </select>
+</mapper>

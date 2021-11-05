@@ -1,0 +1,24 @@
+server:
+  port: 8083
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://tr-yf03001.mysql.rds.aliyuncs.com:3306/crm?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    password: root123@
+    username: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  type-aliases-package: com.xielingwei.pojo
+  mapper-locations: classpath:mapper/*Mapper.xml
+
+
+logging:
+  level:
+    com:
+      study:
+        model:
+          mapper: debug
+
+
